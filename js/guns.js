@@ -244,7 +244,7 @@ guns =
                 }
             },
             "locus": {
-                "name": "Drakon",
+                "name": "Locus",
                 "stats": {
                     "damage": 14,
                     "range": 14,
