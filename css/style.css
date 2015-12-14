@@ -1,0 +1,21 @@
+img{
+
+}
+
+.gunpng{
+    padding: 5%;
+    height: auto;
+    width: 80%
+}
+
+#gunimage{
+    -webkit-transform-origin: 100% 100%;
+    height: auto;
+    width: 100%;
+}
+
+.square{
+    height: 10pt;
+    width: 8pt;
+    padding: 1pt;
+}

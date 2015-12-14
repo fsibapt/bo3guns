@@ -14,6 +14,9 @@ function changegun(gun, guntype){
     for(index in document.getElementsByClassName('gunname')){
         document.getElementsByClassName('gunname')[index].innerHTML = sgun['name'];
     }
+    for(index in document.getElementsByClassName('gunpng')){
+        document.getElementsByClassName('gunpng')[index].src = 'img/' + sgunid + '.png'
+    }
     for(stat in sgun['stats']){
         if(document.getElementById(stat)){
             document.getElementById(stat).innerHTML = "";
