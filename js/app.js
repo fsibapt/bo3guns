@@ -14,8 +14,8 @@ function changegun(gun, guntype){
     for(index in document.getElementsByClassName('gunname')){
         document.getElementsByClassName('gunname')[index].innerHTML = sgun['name'];
     }
-    for(index in document.getElementsByClassName('gunpng')){
-        document.getElementsByClassName('gunpng')[index].src = 'img/' + sgunid + '.png'
+    for(var i = 0 ; i < 2 ; i++){
+        document.getElementsByClassName('gunpng')[i].src = 'img/' + sgunid + '.png'
     }
     for(stat in sgun['stats']){
         if(document.getElementById(stat)){
@@ -54,8 +54,22 @@ function shoot(){
 function reload(){
     localStorage[sgunid] = sgun['stats']['ammo'];
     document.getElementById('ammo').innerHTML = localStorage[sgunid] + '/' + sgun['stats']['ammo'];
+    audio = new Audio('snd/'+sgunid+'/reload.wav');
+    audio.play();
 }
 
 function gunsound(){
+    audio = new Audio('snd/'+sgunid+'/pewpew.wav');
+    audio.play();
+}
 
+function resizeimg(img){
+    img.className = "gunpng";
+
+    if (img.naturalHeight/img.naturalWidth <= screen.height/screen.width){
+        img.className += " horizontal";
+    }
+    else{
+        img.className += " vertical";
+    }
 }

@@ -11,20 +11,20 @@
 </head>
 <body>
     <div data-role="page" id="main" data-theme="b">
-        <div data-role="header" data-add-back-btn="true">
+        <div data-role="header" data-add-back-btn="true" data-tap-toggle="false">
             <h1>Guns</h1>
         </div>
         <ul id="gunlist" data-role="listview">
         </ul>
     </div>
     <div data-role="page" id="gun" data-theme="b">
-        <div data-role="header" data-add-back-btn="true">
+        <div data-role="header" data-add-back-btn="true" data-tap-toggle="false">
             <h1 class="gunname"></h1>
         </div>
-        <div id="gunimage" data-role="content">
-            <img class="gunpng" src="" onclick="shoot()">
+        <div class='ui-content' id="gunimage" data-role="content">
+            <img class="gunpng" src="" onclick="shoot()" onload="resizeimg(this)">
         </div>
-        <div data-role="footer" data-position="fixed">
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
             <div>
                 <a href="#stats" class="ui-btn ui-icon-info ui-btn-icon-left">
                     Stats
@@ -38,13 +38,13 @@
         </div>
     </div>
     <div data-role="page" id="stats" data-theme="b">
-        <div data-role="header" data-add-back-btn="true">
+        <div data-role="header" data-add-back-btn="true" data-tap-toggle="false">
             <h1 class="gunname"></h1>
         </div>
         <div data-role="content">
-            <img class="gunpng" src="" onclick="shoot()">
+            <img class="gunpng" src="" onclick="shoot()" onload="resizeimg(this)">
         </div>
-        <div data-role="footer" data-position="fixed">
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
             <table>
 
                 <tr>
